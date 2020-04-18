@@ -49,6 +49,9 @@ from PIL import Image
 #
 imPath = sys.argv.pop(-1)
 imSrc = Image.open(imPath, 'r')
+
+# Note: inputting a Grayscale-mode BMP works.
+
 imSrc.putpalette( [255,255,255, 0,0,0] if len(imSrc.getcolors()) > 1 else [0,0,0] )
 imBW = imSrc.convert('1') # black & white
 

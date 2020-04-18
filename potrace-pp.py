@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #----------------------------------------------------------------------------
 #
 #   Pixel-perfect potrace for FontForge
@@ -12,12 +12,12 @@
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
-#   
+#
 #  This program is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
-#   
+#
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
@@ -61,10 +61,10 @@ imBig = imBW.resize((imSrc.size[0]*scale, imSrc.size[1]*scale))
 # Run potrace passing the big image
 #
 args = sys.argv
-args[0] = 'potrace'
+args[0] = '/usr/local/bin/potrace'
 
 if not '-r' in args: # Add default resolution (72) if not specified
-	args += ['-r', '72'] 
+	args += ['-r', '72']
 
 args = map(lambda i: # Multiply the resolution parameter (-r)
 		str( int(args[i]) * scale ) if args[i-1] == '-r' else args[i],

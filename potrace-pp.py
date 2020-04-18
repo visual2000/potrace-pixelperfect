@@ -38,7 +38,7 @@
 #
 # Change this to tweak the scaling
 #
-scale = 500
+scale = 80
 
 import os, sys, math
 from subprocess import Popen, PIPE
@@ -69,6 +69,7 @@ args[0] = '/usr/local/bin/potrace'
 # Set some args:
 args += ['-a', '0']
 args += ['-u', '1']
+args += ['-c']
 
 if not '-r' in args: # Add default resolution (72) if not specified
 	args += ['-r', '72']

@@ -63,6 +63,10 @@ imBig = imBW.resize((imSrc.size[0]*scale, imSrc.size[1]*scale))
 args = sys.argv
 args[0] = '/usr/local/bin/potrace'
 
+# Set some args:
+args += ['-a', '0']
+args += ['-u', '1']
+
 if not '-r' in args: # Add default resolution (72) if not specified
 	args += ['-r', '72']
 

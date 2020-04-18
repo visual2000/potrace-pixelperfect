@@ -38,7 +38,7 @@
 #
 # Change this to tweak the scaling
 #
-scale = 80
+scale = 10
 
 import os, sys, math
 from subprocess import Popen, PIPE
